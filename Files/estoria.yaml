@@ -1,0 +1,17 @@
+nome: GenerateStory
+modelo: |
+  Conte uma história sobre {{$topic}} que tenha {{$length}} sentenças.
+formato_do_modelo: semantic-kernel
+descrição: Uma função que gera uma história sobre um tópico.
+variáveis_de_entrada:
+  - nome: topic
+    descrição: O tópico da história.
+    é_obrigatório: true
+  - nome: length
+    descrição: O número de sentenças na história.
+    é_obrigatório: true
+variável_de_saída:
+  descrição: A história gerada.
+configurações_de_execução:
+  padrão:
+    temperatura: 0.6
